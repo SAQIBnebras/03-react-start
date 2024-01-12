@@ -62,9 +62,8 @@ function App() {
 }
 
 function Header(){
-  return
-  (
-    <h1>Fast React Pizza Co.</h1>
+  return(
+    <h1>Fast React Pizza Corporation</h1>
   )
 }
 
@@ -74,6 +73,17 @@ function Menu(){
 
 function Footer(){
   // return React.createElement('footer',null,"we' make new reciepes");
+  //___ js logic in component _____
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closHour = 22;
+  const isOpen  = hour >= openHour && hour<=closHour;
+  console.log(isOpen);
+  // if(hour >= openHour && hour <=closHour)
+  //   alert("We Arr open now");
+  // else
+  //   alert("pizza is closed");
+
   return (
     <footer>{new Date().toLocaleTimeString()} We're currently open</footer>
   )
